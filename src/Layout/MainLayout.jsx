@@ -7,7 +7,9 @@ const MainLayout = () => {
   return (
     <div>
       <Header></Header>
-      <Outlet></Outlet>
+      <div className="min-h-[calc(100vh-301px)] py-2 container mx-auto ">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );

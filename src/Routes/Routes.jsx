@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
-import Home from "../Components/Home";
-import Footer from "../Components/Footer";
-import Sports from "../Pages/Sports";
+import Home from "../Pages/Home";
+import AllSportsEquipment from "../Pages/AllSportsEquipment";
+import AddEquipment from "../Pages/AddEquipment";
+import MyEquipmentList from "../Pages/MyEquipmentList";
 
 const router = createBrowserRouter([
   {
@@ -14,9 +15,18 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/page",
-        element: <Sports></Sports>,
+        path: "/allSportsEquipment",
+        element: <AllSportsEquipment></AllSportsEquipment>,
       },
+      {
+        path: "/addEquipment",
+        element: <AddEquipment></AddEquipment>,
+      },
+      {
+        path: "/myEquipmentList",
+        element: <MyEquipmentList></MyEquipmentList>,
+      },
+
       {
         path: "*",
         element: (

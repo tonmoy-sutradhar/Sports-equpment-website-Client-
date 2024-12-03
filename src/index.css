@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  overflow: scroll;
+}
+a.active {
+  color: rgb(87, 16, 125);
+  text-decoration: underline;
+}
