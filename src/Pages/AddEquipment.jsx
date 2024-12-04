@@ -1,6 +1,31 @@
 import React from "react";
 
 const AddEquipment = () => {
+  const handleAddEquipment = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const photo = form.photo.value;
+    const itemName = form.itemName.value;
+    const categoryName = form.categoryName.value;
+    const description = form.description.value;
+    const price = form.price.value;
+    const rating = form.rating.value;
+    const customization = form.customization.value;
+    const processingTime = form.processingTime.value;
+    const stockStatus = form.stockStatus.value;
+    const allData = {
+      photo,
+      itemName,
+      categoryName,
+      description,
+      price,
+      rating,
+      customization,
+      processingTime,
+      stockStatus,
+    };
+    console.log(allData);
+  };
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg p-6 sm:p-10">
@@ -10,20 +35,17 @@ const AddEquipment = () => {
         </h2>
 
         {/* Form */}
-        <form className="space-y-6">
+        <form onSubmit={handleAddEquipment} className="space-y-6">
           {/* Row 1: Image & Item Name */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Image */}
             <div>
-              <label
-                htmlFor="image"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Image URL
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Image URL</span>
               </label>
               <input
                 type="text"
-                id="image"
+                name="photo"
                 placeholder="Enter image URL"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -31,15 +53,12 @@ const AddEquipment = () => {
 
             {/* Item Name */}
             <div>
-              <label
-                htmlFor="itemName"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Item Name
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Item Name</span>
               </label>
               <input
                 type="text"
-                id="itemName"
+                name="itemName"
                 placeholder="Enter item name"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -50,15 +69,12 @@ const AddEquipment = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Category Name */}
             <div>
-              <label
-                htmlFor="categoryName"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Category Name
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Category Name</span>
               </label>
               <input
+                name="categoryName"
                 type="text"
-                id="categoryName"
                 placeholder="Enter category name"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -66,17 +82,15 @@ const AddEquipment = () => {
 
             {/* Description */}
             <div>
-              <label
-                htmlFor="description"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Description
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Description</span>
               </label>
-              <textarea
-                id="description"
+              <input
+                name="description"
+                type="text"
                 placeholder="Enter description"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none h-24"
-              ></textarea>
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
+              ></input>
             </div>
           </div>
 
@@ -84,15 +98,12 @@ const AddEquipment = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {/* Price */}
             <div>
-              <label
-                htmlFor="price"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Price
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Price</span>
               </label>
               <input
                 type="number"
-                id="price"
+                name="price"
                 placeholder="Enter price"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -100,16 +111,13 @@ const AddEquipment = () => {
 
             {/* Rating */}
             <div>
-              <label
-                htmlFor="rating"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Rating
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Rating</span>
               </label>
               <input
                 type="number"
                 step="0.1"
-                id="rating"
+                name="rating"
                 placeholder="Enter rating (e.g., 4.5)"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -117,15 +125,12 @@ const AddEquipment = () => {
 
             {/* Customization */}
             <div>
-              <label
-                htmlFor="customization"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Customization
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Customization</span>
               </label>
               <input
                 type="text"
-                id="customization"
+                name="customization"
                 placeholder="E.g., Extra grip"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -136,15 +141,14 @@ const AddEquipment = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Processing Time */}
             <div>
-              <label
-                htmlFor="processingTime"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Processing Time
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">
+                  Processing Time
+                </span>
               </label>
               <input
                 type="text"
-                id="processingTime"
+                name="processingTime"
                 placeholder="E.g., 3-5 business days"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -152,15 +156,12 @@ const AddEquipment = () => {
 
             {/* Stock Status */}
             <div>
-              <label
-                htmlFor="stockStatus"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Stock Status
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">Stock Status</span>
               </label>
               <input
                 type="number"
-                id="stockStatus"
+                name="stockStatus"
                 placeholder="Enter available quantity"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
               />
@@ -171,15 +172,12 @@ const AddEquipment = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* User Email */}
             <div>
-              <label
-                htmlFor="userEmail"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                User Email
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">User Email</span>
               </label>
               <input
                 type="email"
-                id="userEmail"
+                name="userEmail"
                 value="user@example.com"
                 readOnly
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100"
@@ -188,15 +186,12 @@ const AddEquipment = () => {
 
             {/* User Name */}
             <div>
-              <label
-                htmlFor="userName"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                User Name
+              <label className="block text-gray-600 text-sm font-medium mb-2">
+                <span className="label-text font-bold mb-2">User Name</span>
               </label>
               <input
                 type="text"
-                id="userName"
+                name="userName"
                 value="John Doe"
                 readOnly
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100"
