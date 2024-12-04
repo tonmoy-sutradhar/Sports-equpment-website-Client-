@@ -29,6 +29,8 @@ const Header = () => {
             <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
             <NavLink to="/addEquipment">Add Equipment</NavLink>
             <NavLink to="/myEquipmentList">My Equipment List</NavLink>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/register">Register</NavLink>
           </ul>
         </div>
         <div className="flex items-center gap-2">
@@ -48,6 +50,8 @@ const Header = () => {
           <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
           <NavLink to="/addEquipment">Add Equipment</NavLink>
           <NavLink to="/myEquipmentList">My Equipment List</NavLink>
+          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/register">Register</NavLink>
         </ul>
       </div>
       <div className="navbar-end">

@@ -4,6 +4,8 @@ import Home from "../Pages/Home";
 import AllSportsEquipment from "../Pages/AllSportsEquipment";
 import AddEquipment from "../Pages/AddEquipment";
 import MyEquipmentList from "../Pages/MyEquipmentList";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/myEquipmentList",
         element: <MyEquipmentList></MyEquipmentList>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
 
       {
