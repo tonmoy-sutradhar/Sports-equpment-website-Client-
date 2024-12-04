@@ -6,6 +6,7 @@ import AddEquipment from "../Pages/AddEquipment";
 import MyEquipmentList from "../Pages/MyEquipmentList";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ForgotPassword from "../Components/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/forgotPassword",
+        element: <ForgotPassword></ForgotPassword>,
       },
 
       {
