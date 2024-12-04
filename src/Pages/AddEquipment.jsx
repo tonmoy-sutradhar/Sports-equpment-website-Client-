@@ -1,3 +1,4 @@
+import { stringify } from "postcss";
 import React from "react";
 
 const AddEquipment = () => {
@@ -20,11 +21,22 @@ const AddEquipment = () => {
       description,
       price,
       rating,
-      customization,
-      processingTime,
       stockStatus,
+      processingTime,
+      customization,
     };
-    console.log(allData);
+    // console.log(allData);
+    fetch("http://localhost:8000/equipment", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(allData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("All added data -->", data);
+      });
   };
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
