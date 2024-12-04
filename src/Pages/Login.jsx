@@ -41,7 +41,7 @@ const Login = () => {
   return (
     <>
       <div className=" flex justify-center items-center ">
-        <div className="card bg-blue-300 w-full max-w-sm shrink-0 shadow-2xl rounded-none p-3 ">
+        <div className="card bg-gradient-to-r from-blue-500 to-purple-600  w-full max-w-sm shrink-0 shadow-2xl rounded-lg p-3 ">
           <form onSubmit={handleSubmit} className="card-body ">
             <h1 className="text-xl font-semibold text-center">
               Login your account
@@ -79,8 +79,21 @@ const Login = () => {
               </label>
               {/* {<label className="label text-sm text-red-600">{err}</label>} */}
             </div>
+
+            <div className="form-control mt-6">
+              <button className="btn btn-active bg-lime-400 text-black font-bold rounded-lg">
+                Login
+              </button>
+            </div>
+
+            <div className="flex items-center justify-center my-4">
+              <div className="flex-grow border-t border-black"></div>
+              <span className="mx-4 text-black">OR</span>
+              <div className="flex-grow border-t border-black"></div>
+            </div>
+
             {/* Google login */}
-            <div className="flex justify-center gap-1 mt-3 items-center w-[60%] border-2 border-blue-500 rounded-full px-1">
+            <div className="flex justify-center gap-1  items-center w-[100%] border-2  rounded-lg bg-lime-300 px-1">
               <img className="w-5 h-5 rounded-full" src={google} alt="img" />
               <button
                 onClick={() => {
@@ -99,17 +112,12 @@ const Login = () => {
               </button>
             </div>
 
-            <div className="form-control mt-6">
-              <button className="btn btn-active bg-lime-400 text-black font-bold rounded-lg">
-                Login
-              </button>
-            </div>
             {/* {success && toast.success("Login successful")}
           {err && toast.warning("Error in Login..!!")} */}
           </form>
-          <p className="text-sm text-center text-gray-500 mt-2">
+          <p className="text-sm text-center text-black-500 mt-2">
             Don’t Have An Account ?{" "}
-            <Link to="/register" className="text-red-500">
+            <Link to="/register" className="text-lime-400">
               Registers
             </Link>
           </p>

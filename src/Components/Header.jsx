@@ -1,6 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import { useContext } from "react";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  // logOut(auth)
+  //   .then(() => {
+  //     console.log("user logout");
+  //   })
+  //   .catch((err) => {
+  //     console.log("error in logout");
+  //   });
   return (
     <div className="navbar bg-blue-500 text-white px-6">
       <div className="navbar-start">
@@ -29,8 +39,8 @@ const Header = () => {
             <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
             <NavLink to="/addEquipment">Add Equipment</NavLink>
             <NavLink to="/myEquipmentList">My Equipment List</NavLink>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink>
+            {/* <NavLink to="/login">Login</NavLink>
+            <NavLink to="/register">Register</NavLink> */}
           </ul>
         </div>
         <div className="flex items-center gap-2">
@@ -50,12 +60,12 @@ const Header = () => {
           <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
           <NavLink to="/addEquipment">Add Equipment</NavLink>
           <NavLink to="/myEquipmentList">My Equipment List</NavLink>
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register">Register</NavLink>
+          {/* <NavLink to="/login">Login</NavLink>
+          <NavLink to="/register">Register</NavLink> */}
         </ul>
       </div>
       <div className="navbar-end">
-        {/* {user && user?.email ? (
+        {user && user?.email ? (
           <div className="flex justify-center items-center gap-3">
             <img
               title={user?.displayName}
@@ -63,16 +73,22 @@ const Header = () => {
               src={user?.photoURL}
               alt="Profile-photo"
             />
-            <button to="/login" onClick={logOut} className="btn btn-warning">
+            <button onClick={logOut} className="btn bg-lime-400">
               Logout
             </button>
           </div>
         ) : (
-          <NavLink to="/login" className="btn">
-            Login
-          </NavLink>
-        )} */}
-        <button className="btn bg-lime-400">Get Started</button>
+          <div className="flex justify-center items-center gap-3">
+            <NavLink to="/login" className="btn bg-lime-400">
+              Login
+            </NavLink>
+            <NavLink to="/register" className="btn bg-lime-400">
+              Signup
+            </NavLink>
+          </div>
+        )}
+
+        {/* <button className="btn bg-lime-400">Get Started</button> */}
       </div>
     </div>
   );

@@ -164,7 +164,7 @@ const Register = () => {
             </label>
           </div>
 
-          <div className="flex justify-center gap-1 mt-3 items-center w-[60%] border-2 border-blue-500 rounded-full px-1">
+          <div className="flex justify-center gap-1 mt-3 items-center w-[60%] border-2 border-blue-500 bg-lime-300 rounded-full px-1">
             <img className="w-5 h-5 rounded-full" src={google} alt="img" />
             <button
               type="button"
