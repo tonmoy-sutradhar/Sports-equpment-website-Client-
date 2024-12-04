@@ -1,84 +1,118 @@
-import React from "react";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import google from "../assets/google.png";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const { userLogin, setUser, GoogleLogin } = useContext(AuthContext);
+  const [err, setErr] = useState("");
+  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.target);
+    const email = form.get("email");
+    const password = form.get("password");
+    setSuccess(false);
+    setErr("");
+
+    userLogin(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        setSuccess(true);
+        toast.success("Login successful");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        // console.log("ERROR IN LOGIN --", error.message);
+        toast.warning("Error in Login..!!");
+        setSuccess(false);
+        setErr(error.message);
+      });
+
+    // console.log(email, password);
+  };
+  // min-h-screen
+
   return (
     <>
-      <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-100">
-        {/* Left Section: Illustration/Brand */}
-        <div className="hidden md:flex flex-1 bg-gradient-to-r from-lime-400 to-green-500 h-full items-center justify-center">
-          <div className="text-center px-8">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6">
-              Welcome Back!
-            </h2>
-            <p className="text-white text-lg leading-relaxed max-w-md mx-auto">
-              Discover your next adventure in sports. Log in to your account and
-              gear up for greatness!
-            </p>
-          </div>
-        </div>
-
-        {/* Right Section: Login Form */}
-        <div className="flex-1 max-w-md w-full px-6 sm:px-8 md:px-12 bg-white shadow-lg rounded-lg py-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-700">
-            Login to Your Account
-          </h2>
-
-          <form className="space-y-6">
-            {/* Email Input */}
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Email Address
+      <div className=" flex justify-center items-center ">
+        <div className="card bg-blue-300 w-full max-w-sm shrink-0 shadow-2xl rounded-none p-3 ">
+          <form onSubmit={handleSubmit} className="card-body ">
+            <h1 className="text-xl font-semibold text-center">
+              Login your account
+            </h1>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-semibold">Email address</span>
               </label>
               <input
                 type="email"
-                id="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
-                placeholder="Enter your email"
+                name="email"
+                placeholder="Enter your email address"
+                className="input rounded-none  bg-[#F3F3F3]"
+                required
               />
             </div>
-
-            {/* Password Input */}
-            <div>
-              <label
-                htmlFor="password"
-                className="block text-gray-600 text-sm font-medium mb-2"
-              >
-                Password
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text font-bold">Password</span>
               </label>
               <input
                 type="password"
-                id="password"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
+                name="password"
                 placeholder="Enter your password"
+                className="input rounded-none bg-[#F3F3F3]"
+                required
               />
+              <label className="label">
+                <Link
+                  to="/forgotPassword"
+                  className="label-text-alt link link-hover text-red-500"
+                >
+                  Forgot password?
+                </Link>
+              </label>
+              {/* {<label className="label text-sm text-red-600">{err}</label>} */}
             </div>
-
-            {/* Submit Button */}
-            <div>
+            {/* Google login */}
+            <div className="flex justify-center gap-1 mt-3 items-center w-[60%] border-2 border-blue-500 rounded-full px-1">
+              <img className="w-5 h-5 rounded-full" src={google} alt="img" />
               <button
-                type="submit"
-                className="w-full py-2 px-4 bg-lime-400 hover:bg-lime-500 text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-lime-400 transition duration-200"
+                onClick={() => {
+                  GoogleLogin()
+                    .then(() => {
+                      toast.success("Google login successful");
+                      navigate("/");
+                    })
+                    .catch((error) => {
+                      toast.warning("Google login don't succesful");
+                    });
+                }}
+                className="text-sm py-1"
               >
-                Log In
+                Login with Google
               </button>
             </div>
-          </form>
 
-          {/* Additional Options */}
-          <div className="mt-4 text-center">
-            <p className="text-gray-500 text-sm">
-              Don't have an account?{" "}
-              <a
-                href="#"
-                className="text-lime-400 hover:underline font-semibold"
-              >
-                Sign Up
-              </a>
-            </p>
-          </div>
+            <div className="form-control mt-6">
+              <button className="btn btn-active bg-lime-400 text-black font-bold rounded-lg">
+                Login
+              </button>
+            </div>
+            {/* {success && toast.success("Login successful")}
+          {err && toast.warning("Error in Login..!!")} */}
+          </form>
+          <p className="text-sm text-center text-gray-500 mt-2">
+            Don’t Have An Account ?{" "}
+            <Link to="/register" className="text-red-500">
+              Registers
+            </Link>
+          </p>
         </div>
       </div>
     </>
