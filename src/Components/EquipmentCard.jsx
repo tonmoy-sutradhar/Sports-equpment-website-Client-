@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const EquipmentCard = ({ equipment }) => {
   const {
+    _id,
     photo,
     itemName,
     categoryName,
@@ -57,7 +59,9 @@ const EquipmentCard = ({ equipment }) => {
                 />
               </div>
             </div>
-            <button className="btn bg-lime-400">View Details</button>
+            <Link to={`/viewDetails/${_id}`}>
+              <button className="btn bg-lime-400 w-full">View Details</button>
+            </Link>
             <div className="card-actions justify-end">
               <div className="badge badge-outline">Quantity: {stockStatus}</div>
               <div className="badge badge-outline">
