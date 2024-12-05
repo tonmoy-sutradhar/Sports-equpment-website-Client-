@@ -24,7 +24,7 @@ const AllSportsEquipment = () => {
           required
         />
       </div> */}
-      <div className="w-full mx-auto bg-slate-50 px-10 text-center my-9">
+      <div className="w-full mx-auto bg-blue-100 px-10 text-center my-9">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}

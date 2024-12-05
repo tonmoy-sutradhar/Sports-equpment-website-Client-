@@ -84,6 +84,9 @@ const AuthProvider = ({ children }) => {
   const addToCart = (item) => {
     setCart((prevCart) => [...prevCart, item]);
   };
+  const removeFromCart = (id) => {
+    setCart((prev) => prev.filter((item) => item._id !== id));
+  };
 
   const AuthInfo = {
     user,
@@ -97,6 +100,7 @@ const AuthProvider = ({ children }) => {
     forgotPassword,
     cart,
     addToCart,
+    removeFromCart,
   };
   return (
     <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>

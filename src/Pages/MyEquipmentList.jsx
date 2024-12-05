@@ -1,37 +1,36 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import MyEquipmentCart from "../Components/MyEquipmentCart";
 
 const MyEquipmentList = () => {
-  const { cart } = useContext(AuthContext); // Access cart data from AuthContext
+  const { cart } = useContext(AuthContext);
+
+  const [myCart, setMyCart] = useState(cart);
 
   return (
-    <div className="container mx-auto my-6">
-      <h1 className="text-3xl font-bold text-center mb-4">My Equipment List</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {cart.length > 0 ? (
-          cart.map((item) => (
-            <div
-              key={item._id}
-              className="p-4 border rounded-lg shadow-md bg-white"
-            >
-              <img
-                src={item.photo}
-                alt={item.itemName}
-                className="h-48 w-full object-cover rounded-md"
-              />
-              <h2 className="text-xl font-semibold mt-2">{item.itemName}</h2>
-              <p className="text-gray-600">Price: ${item.price}</p>
-              <p className="text-gray-600">{item.description}</p>
-              <p className="text-gray-600">Rating: {item.rating}</p>
-            </div>
-          ))
-        ) : (
-          <p className="text-center text-gray-500 col-span-3">
-            Your cart is empty. Add items to see them here!
-          </p>
-        )}
+    <>
+      <h1 className="text-3xl font-bold text-center border-b-2 w-[300px] mx-auto text-lime-500 mb-5">
+        My Equipment List
+      </h1>
+      <div className="my-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-9">
+          {cart.length > 0 ? (
+            cart.map((item) => (
+              <MyEquipmentCart
+                key={item._id}
+                myCart={myCart}
+                setMyCart={setMyCart}
+                item={item}
+              ></MyEquipmentCart>
+            ))
+          ) : (
+            <p className="text-center text-xl font-bold  ml-[380px] text-purple-500 col-span-3">
+              No Sports equipment added, Cart is Empty
+            </p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

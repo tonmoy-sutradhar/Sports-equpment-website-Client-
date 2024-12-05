@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { MdOutlineAddShoppingCart } from "react-icons/md";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const ViewDetails = () => {
   const { addToCart } = useContext(AuthContext);
@@ -21,7 +22,8 @@ const ViewDetails = () => {
 
   const handleAddToCart = () => {
     addToCart(viewData);
-    alert(`${itemName} has been added to the cart!`);
+    // alert(`${itemName} has been added to the cart!`);
+    toast.success(`${itemName} has been added to the cart.`);
   };
   return (
     <div
