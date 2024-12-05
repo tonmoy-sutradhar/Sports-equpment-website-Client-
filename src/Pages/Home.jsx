@@ -81,7 +81,7 @@ const Home = () => {
         All sports products
       </h1>
       <div className="w-full grid grid-cols-4 gap-7 px-6 my-10">
-        {loadData.map((equipment) => (
+        {loadData.slice(0, 6).map((equipment) => (
           <EquipmentCard
             key={equipment._id}
             equipment={equipment}

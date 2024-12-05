@@ -21,9 +21,17 @@ const AuthProvider = ({ children }) => {
   const provider = new GoogleAuthProvider();
   // console.log(user);
 
-  const createNewUser = (email, password) => {
+  // const createNewUser = (email, password) => {
+  //   setLoading(true);
+  //   return createUserWithEmailAndPassword(auth, email, password);
+  // };
+  const createNewUser = async (email, password) => {
     setLoading(true);
-    return createUserWithEmailAndPassword(auth, email, password);
+    try {
+      return await createUserWithEmailAndPassword(auth, email, password);
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Observer set----->>
@@ -62,9 +70,14 @@ const AuthProvider = ({ children }) => {
   };
 
   // Forgot Password with email
-  const forgotPassword = () => {
+  // const forgotPassword = () => {
+  //   return sendPasswordResetEmail(auth, email);
+  // };
+  const forgotPassword = (email) => {
+    setLoading(true);
     return sendPasswordResetEmail(auth, email);
   };
+
   const AuthInfo = {
     user,
     setUser,
