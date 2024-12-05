@@ -63,10 +63,10 @@ const Register = () => {
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {
             navigate("/");
-            console.log("Profile Update.");
+            // console.log("Profile Update.");
           })
           .catch((error) => {
-            console.log("ERROR IN PROFILE --", error);
+            // console.log("ERROR IN PROFILE --", error);
           });
       })
       .catch((error) => {

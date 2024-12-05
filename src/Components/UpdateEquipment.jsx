@@ -41,16 +41,19 @@ const UpdateEquipment = () => {
       customization,
     };
 
-    fetch(`http://localhost:8000/equipment/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(equipmentData),
-    })
+    fetch(
+      `https://sports-equipment-store-server-zeta.vercel.app/equipment/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(equipmentData),
+      }
+    )
       .then((res) => res.json())
       .then((value) => {
-        console.log(value, "update value");
+        // console.log(value, "update value");
         if (value.modifiedCount > 0) {
           Swal.fire({
             title: "success!",

@@ -24,11 +24,11 @@ const Banner = () => {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
-        modules={[EffectCoverflow, Pagination /*Autoplay*/]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -61,7 +61,7 @@ const Banner = () => {
             {/* Text overlay */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
               <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
-                Gear Up for Victory!
+                BEST SPORTS EQUIPMENT!
               </h1>
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Discover top-quality sports equipment and apparel for every
@@ -81,7 +81,7 @@ const Banner = () => {
             {/* Text overlay */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
               <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
-                Gear Up for Victory!
+                BEST SELL TODAY!
               </h1>
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Discover top-quality sports equipment and apparel for every

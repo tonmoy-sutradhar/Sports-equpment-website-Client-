@@ -29,7 +29,7 @@ const AddEquipment = () => {
       customization,
     };
     // console.log(allData);
-    fetch("http://localhost:8000/equipment", {
+    fetch("https://sports-equipment-store-server-zeta.vercel.app/equipment", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -41,7 +41,7 @@ const AddEquipment = () => {
         if (data.insertedId) {
           toast.success("Sports equipment add successfully");
         }
-        console.log("All added data -->", data);
+        // console.log("All added data -->", data);
       });
   };
   return (
