@@ -7,7 +7,7 @@ const AllSportsEquipment = () => {
   const loaderData = useLoaderData();
   const [equipments, setEquipments] = useState(loaderData);
 
-  console.log(loaderData);
+  // console.log(loaderData);
   return (
     <>
       <h1 className="text-3xl font-bold text-center border-b-2 w-[400px] mx-auto text-lime-500 mb-5">
@@ -24,7 +24,7 @@ const AllSportsEquipment = () => {
           required
         />
       </div> */}
-      <div className="w-full mx-auto bg-slate-50 px-10 text-center">
+      <div className="w-full mx-auto bg-slate-50 px-10 text-center my-9">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}

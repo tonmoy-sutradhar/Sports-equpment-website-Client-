@@ -1,5 +1,6 @@
 import { stringify } from "postcss";
 import React from "react";
+import { toast } from "react-toastify";
 
 const AddEquipment = () => {
   const handleAddEquipment = (e) => {
@@ -35,6 +36,9 @@ const AddEquipment = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        if (data.insertedId) {
+          toast.success("Sports equipment add successfully");
+        }
         console.log("All added data -->", data);
       });
   };
