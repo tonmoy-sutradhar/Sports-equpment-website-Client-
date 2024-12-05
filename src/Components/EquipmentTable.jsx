@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFile, FaTrash } from "react-icons/fa";
 import { MdDone, MdOutlineDoneAll } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { data, Link } from "react-router-dom";
 import { MdUpdate } from "react-icons/md";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
@@ -53,6 +53,7 @@ const EquipmentTable = ({ equipment, index, equipments, setEquipments }) => {
 
     console.log(id);
   };
+
   return (
     <>
       <tr>
@@ -75,9 +76,9 @@ const EquipmentTable = ({ equipment, index, equipments, setEquipments }) => {
             </button>
             <button
               title="Update"
-              className="bg-pink-500 px-4 py-2 rounded text-white"
+              className="bg-blue-500 px-4 py-2 rounded text-white"
             >
-              <Link>
+              <Link to={`/updateEquipment/${_id}`}>
                 <MdUpdate></MdUpdate>
               </Link>
             </button>

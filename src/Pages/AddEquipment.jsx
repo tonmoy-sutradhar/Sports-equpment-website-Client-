@@ -44,7 +44,7 @@ const AddEquipment = () => {
   };
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg p-6 sm:p-10">
+      <div className="max-w-4xl w-full bg-lime-200 shadow-lg rounded-lg p-6 sm:p-10">
         {/* Page Title */}
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-700 mb-6 text-center">
           Add New Equipment
@@ -219,7 +219,7 @@ const AddEquipment = () => {
           <div className="text-center">
             <button
               type="submit"
-              className="bg-lime-400 hover:bg-lime-500 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition duration-200"
+              className="bg-lime-500 hover:bg-lime-500 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition duration-200"
             >
               Add Equipment
             </button>

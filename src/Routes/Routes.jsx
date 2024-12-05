@@ -8,6 +8,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ForgotPassword from "../Components/ForgotPassword";
 import ViewDetails from "../Components/ViewDetails";
+import UpdateEquipment from "../Components/UpdateEquipment";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,12 @@ const router = createBrowserRouter([
       {
         path: "/viewDetails/:id",
         element: <ViewDetails></ViewDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:8000/equipment/${params.id}`),
+      },
+      {
+        path: "/updateEquipment/:id",
+        element: <UpdateEquipment></UpdateEquipment>,
         loader: ({ params }) =>
           fetch(`http://localhost:8000/equipment/${params.id}`),
       },
