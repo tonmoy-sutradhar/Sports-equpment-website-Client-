@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateEquipment = () => {
   const loaderUpdateData = useLoaderData();
@@ -41,7 +42,7 @@ const UpdateEquipment = () => {
     };
 
     fetch(`http://localhost:8000/equipment/${_id}`, {
-      method: "POST",
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
@@ -50,6 +51,14 @@ const UpdateEquipment = () => {
       .then((res) => res.json())
       .then((value) => {
         console.log(value, "update value");
+        if (value.modifiedCount > 0) {
+          Swal.fire({
+            title: "success!",
+            text: "Coffee update successfully",
+            icon: "success",
+            confirmButtonText: "Done",
+          });
+        }
       });
   };
   return (
