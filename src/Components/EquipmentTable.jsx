@@ -5,6 +5,7 @@ import { data, Link } from "react-router-dom";
 import { MdUpdate } from "react-icons/md";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import { FcViewDetails } from "react-icons/fc";
 
 const EquipmentTable = ({ equipment, index, equipments, setEquipments }) => {
   const {
@@ -67,24 +68,27 @@ const EquipmentTable = ({ equipment, index, equipments, setEquipments }) => {
         <td>
           <div className="flex gap-4">
             {" "}
-            <button
+            {/* <button
               title="Delete"
               onClick={() => handleDelete(_id)}
               className="bg-red-500 px-4 py-2 rounded text-white"
             >
               <FaTrash></FaTrash>
-            </button>
+            </button> */}
             <button
-              title="Update"
+              title="View Details"
               className="bg-blue-500 px-4 py-2 rounded text-white"
             >
-              <Link to={`/updateEquipment/${_id}`}>
+              {/* <Link to={`/updateEquipment/${_id}`}>
                 <MdUpdate></MdUpdate>
+              </Link> */}
+              <Link to={`/viewDetails/${_id}`}>
+                <button>
+                  {" "}
+                  <FcViewDetails></FcViewDetails>
+                </button>
               </Link>
             </button>
-            {/* <button className="bg-pink-500 px-4 py-2 rounded text-white">
-              {isCompleted ? <MdOutlineDoneAll /> : <MdDone />}
-            </button> */}
           </div>
         </td>
       </tr>

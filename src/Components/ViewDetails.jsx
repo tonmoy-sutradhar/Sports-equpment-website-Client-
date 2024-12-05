@@ -1,6 +1,10 @@
 import { useLoaderData } from "react-router-dom";
+import { MdOutlineAddShoppingCart } from "react-icons/md";
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const ViewDetails = () => {
+  const { addToCart } = useContext(AuthContext);
   const viewData = useLoaderData();
   const {
     _id,
@@ -14,6 +18,11 @@ const ViewDetails = () => {
     processingTime,
     customization,
   } = viewData;
+
+  const handleAddToCart = () => {
+    addToCart(viewData);
+    alert(`${itemName} has been added to the cart!`);
+  };
   return (
     <div
       className="hero w-[80%] mx-auto h-[500px]  my-6 rounded-s-2xl"
@@ -23,7 +32,7 @@ const ViewDetails = () => {
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="flex justify-evenly items-center gap-9">
-        <div>
+        <div className="w-[400px] mx-auto">
           <img src={photo} alt="Image" />
         </div>
         <div className="max-w-xl text-2xl text-start">
@@ -78,6 +87,12 @@ const ViewDetails = () => {
             Delivery Time:{" "}
             <span className="text-blue-500">{processingTime} day</span>
           </p>
+          <button
+            onClick={handleAddToCart}
+            className="btn bg-lime-500 text-xl mt-3"
+          >
+            Add to Cart <MdOutlineAddShoppingCart></MdOutlineAddShoppingCart>
+          </button>
         </div>
       </div>
     </div>

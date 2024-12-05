@@ -58,6 +58,7 @@ const Register = () => {
         setUser(user);
         setSuccess(true);
         toast.success("Sign up successfully.");
+        // console.log(user);
 
         updateUserProfile({ displayName: name, photoURL: photo })
           .then(() => {

@@ -59,9 +59,9 @@ const EquipmentCard = ({ equipment }) => {
                 />
               </div>
             </div>
-            <Link to={`/viewDetails/${_id}`}>
+            {/* <Link to={`/viewDetails/${_id}`}>
               <button className="btn bg-lime-400 w-full">View Details</button>
-            </Link>
+            </Link> */}
             <div className="card-actions justify-end">
               <div className="badge badge-outline">Quantity: {stockStatus}</div>
               <div className="badge badge-outline">
