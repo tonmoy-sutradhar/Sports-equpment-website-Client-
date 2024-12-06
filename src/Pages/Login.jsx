@@ -41,9 +41,16 @@ const Login = () => {
   return (
     <>
       <div className=" flex justify-center items-center ">
-        <div className="card bg-gradient-to-r from-blue-500 to-purple-600  w-full max-w-sm shrink-0 shadow-2xl rounded-lg p-3 ">
+        <div className="card bg-gradient-to-r from-blue-500 to-purple-600  w-full max-w-sm shrink-0 shadow-2xl rounded-lg  ">
+          <div>
+            <img
+              src="https://i.pinimg.com/originals/8e/ea/a9/8eeaa9995a0e1313e93098130b7bbe7d.png"
+              alt=""
+            />
+          </div>
           <form onSubmit={handleSubmit} className="card-body ">
-            <h1 className="text-xl font-semibold text-center">
+            <h1 className="text-2xl -mt-9 font-semibold text-center">
+              <span className="text-white">WELCOME</span> <br />
               Login your account
             </h1>
             <div className="form-control">
@@ -115,9 +122,9 @@ const Login = () => {
             {/* {success && toast.success("Login successful")}
           {err && toast.warning("Error in Login..!!")} */}
           </form>
-          <p className="text-sm text-center text-black-500 mt-2">
+          <p className="text-sm text-center text-black-500 mt-2 mb-3">
             Don’t Have An Account ?{" "}
-            <Link to="/register" className="text-green-500 text-xl">
+            <Link to="/register" className="text-white text-xl">
               Registers
             </Link>
           </p>
