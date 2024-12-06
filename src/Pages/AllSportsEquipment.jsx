@@ -8,24 +8,28 @@ const AllSportsEquipment = () => {
   const loaderData = useLoaderData();
   const [equipments, setEquipments] = useState(loaderData);
 
+  const handleSortByPrice = () => {
+    const sortedEquipments = [...equipments].sort((a, b) => a.price - b.price);
+    setEquipments(sortedEquipments);
+  };
+
   // console.log(loaderData);
   return (
     <>
-      <h1 className="text-3xl font-bold text-center border-b-2 w-[400px] mx-auto text-lime-500 mb-5">
+      <h1 className="text-3xl font-bold text-center border-b-2 w-[400px] mx-auto text-lime-500 ">
         All Sports Equipment Table
       </h1>
 
-      {/* <div className="w-[800px] mx-auto mb-4 mt-5 px-10">
-        <input
-          onChange={(e) => setSearch(e.target.value)}
-          type="text"
-          name="search"
-          placeholder="search"
-          className="input input-bordered w-full"
-          required
-        />
-      </div> */}
-      <div className="w-full mx-auto bg-blue-100 px-10 text-center my-9">
+      <div className=" ml-5">
+        <button
+          onClick={handleSortByPrice}
+          className="bg-lime-400 px-6 py-2 font-bold rounded text-black"
+        >
+          Sort by Price
+        </button>
+      </div>
+
+      <div className="w-full mx-auto bg-blue-100 px-10 text-center mb-9 mt-1">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}

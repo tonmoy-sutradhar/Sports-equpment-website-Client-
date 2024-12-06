@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
 import { Fade } from "react-awesome-reveal";
+import { Tooltip } from "react-tooltip";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -14,7 +15,7 @@ const Header = () => {
   //   });
   return (
     <Fade>
-      <div className="navbar bg-blue-500 text-white px-6">
+      <div className="navbar bg-blue-500 opacity-80 text-white px-6 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,17 +65,36 @@ const Header = () => {
             <NavLink to="/myEquipmentList">My Equipment List</NavLink>
             {/* <NavLink to="/login">Login</NavLink>
           <NavLink to="/register">Register</NavLink> */}
+            {/* <a
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Hello to you too!"
+            >
+              data
+            </a> */}
           </ul>
         </div>
         <div className="navbar-end">
           {user && user?.email ? (
             <div className="flex justify-center items-center gap-3">
               <img
-                title={user?.displayName}
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user?.displayName}
                 className="w-11 rounded-full"
                 src={user?.photoURL}
                 alt="Profile-photo"
               />
+              <Tooltip id="my-tooltip" />
+              {/* <div>
+                <img
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content={user?.displayName}
+                  className="w-11 rounded-full"
+                  src={user?.photoURL}
+                  alt="Profile-photo"
+                />
+                <Tooltip id="my-Tooltip"></Tooltip>
+                
+              </div> */}
               <button onClick={logOut} className="btn bg-lime-400">
                 Logout
               </button>
