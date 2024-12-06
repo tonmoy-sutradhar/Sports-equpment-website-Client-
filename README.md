@@ -70,46 +70,46 @@ Sports equipment store is a responsive sports equipment e-commerce platform that
   <img src="" alt="Forgot Password" width="80%" />
 </p>
 
-## Features
+# Features
 
-## User Authentication:
+#### User Authentication:
 
 - Login and registration with email/password and an additional method (Example->, Google).
 - Dynamic navbar showing user details and logout option upon login.
 
-## Product Management:
+#### Product Management:
 
-- Add, update, and delete sports equipment with customizable fields like rating, price, and stock status.
+- Add, update, and delete sports equipment with customizable fields like rating, price, and stock quantity.
 - Logged-in users can view and manage their added equipment on a private "My Equipment List" page.
 
-## Responsive Design:
+#### Responsive Design:
 
 - Fully responsive interface for seamless navigation across mobile, tablet, and desktop devices.
 - Integrated dark/light theme toggle for personalized user experience.
 
-## Advanced Product Features:
+#### Advanced Product Features:
 
 - View detailed product information with beautiful design on a private route.
 - Sort products by price (ascending or descending) for better usability.
 
-## Modern UI Elements:
+#### Modern UI Elements:
 
 - Interactive loading spinners, animated sliders, and additional meaningful sections on the homepage.
 - Integration of Lottie React and React Awesome Reveal for animations and React Tooltip for enhanced interactivity.
 
-## Error Handling and Feedback:
+#### Error Handling and Feedback:
 
 - Custom error and success notifications using toast/sweet alerts instead of default alerts.
 - A meaningful 404 page for non-existing routes.
 
-## Hosting and Deployment:
+#### Hosting and Deployment:
 
 - Client-side hosting via Netlify/Firebase and server-side hosting with Vercel.
 - Error-free navigation across all routes, even on page reload.
 
 # Technology Used
 
-## Frontend Technologies:
+#### Frontend Technologies:
 
 - React.js: For building the single-page application (SPA) with a responsive user interface.
 - React Router: For managing routing and private routes.
@@ -118,34 +118,34 @@ Sports equipment store is a responsive sports equipment e-commerce platform that
 - React Awesome Reveal: For scroll animations.
 - React Tooltip: For tooltips and interactivity.
 
-## Backend Technologies:
+#### Backend Technologies:
 
 - Node.js: For creating the server-side application.
 - Express.js: For building RESTful APIs and handling server-side routing.
 
-## Database:
+#### Database:
 
 - MongoDB: For storing sports equipment data and user-related information.
 
-## Authentication:
+#### Authentication:
 
 - Firebase Authentication: For secure user authentication and authorization.
 
-## Hosting:
+#### Hosting:
 
 - Netlify / Firebase Hosting: For deploying the client-side application.
 - Vercel: For deploying the server-side application.
 
-## Version Control:
+#### Version Control:
 
 - Git & GitHub: For tracking project changes with meaningful commits and collaboration.
 
-## Additional Tools:
+#### Additional Tools:
 
 - Environment Variables: For securely storing Firebase and MongoDB credentials.
 - Toast/Sweet Alert: For displaying error and success messages.
 - Slider Libraries: For creating dynamic homepage banners.
 
-## Feedback
+# Feedback
 
 If you have any feedback, please reach out to me on [LinkedIn](https://www.linkedin.com/in/tonmoy-sutradhar-013071280/).
