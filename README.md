@@ -107,43 +107,44 @@ A meaningful 404 page for non-existing routes.
 Client-side hosting via Netlify/Firebase and server-side hosting with Vercel.
 Error-free navigation across all routes, even on page reload.
 
-## Technology Used
+# Technology Used
 
-- Frontend Technologies:
+## Frontend Technologies:
 
-React.js: For building the single-page application (SPA) with a responsive user interface.
-React Router: For managing routing and private routes.
-Tailwind CSS / Bootstrap: For styling and ensuring responsive design.
-Lottie React: For integrating animations.
-React Awesome Reveal: For scroll animations.
-React Tooltip: For tooltips and interactivity.
+- React.js: For building the single-page application (SPA) with a responsive user interface.
+- React Router: For managing routing and private routes.
+- Tailwind CSS / Bootstrap: For styling and ensuring responsive design.
+- Lottie React: For integrating animations.
+- React Awesome Reveal: For scroll animations.
+- React Tooltip: For tooltips and interactivity.
 
-- Backend Technologies:
+## Backend Technologies:
 
-Node.js: For creating the server-side application.
-Express.js: For building RESTful APIs and handling server-side routing.
+- Node.js: For creating the server-side application.
+- Express.js: For building RESTful APIs and handling server-side routing.
 
-- Database:
+## Database:
 
-MongoDB: For storing sports equipment data and user-related information.
+- MongoDB: For storing sports equipment data and user-related information.
 
-- Authentication:
+## Authentication:
 
-Firebase Authentication: For secure user authentication and authorization.
-Hosting:
+- Firebase Authentication: For secure user authentication and authorization.
 
-Netlify / Firebase Hosting: For deploying the client-side application.
-Vercel: For deploying the server-side application.
+## Hosting:
 
-- Version Control:
+- Netlify / Firebase Hosting: For deploying the client-side application.
+- Vercel: For deploying the server-side application.
 
-Git & GitHub: For tracking project changes with meaningful commits and collaboration.
+## Version Control:
 
-- Additional Tools:
+- Git & GitHub: For tracking project changes with meaningful commits and collaboration.
 
-Environment Variables: For securely storing Firebase and MongoDB credentials.
-Toast/Sweet Alert: For displaying error and success messages.
-Slider Libraries: For creating dynamic homepage banners.
+## Additional Tools:
+
+- Environment Variables: For securely storing Firebase and MongoDB credentials.
+- Toast/Sweet Alert: For displaying error and success messages.
+- Slider Libraries: For creating dynamic homepage banners.
 
 ## Feedback
 
