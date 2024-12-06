@@ -72,40 +72,40 @@ Sports equipment store is a responsive sports equipment e-commerce platform that
 
 ## Features
 
-- User Authentication:
+## User Authentication:
 
-Login and registration with email/password and an additional method (Example->, Google).
-Dynamic navbar showing user details and logout option upon login.
+- Login and registration with email/password and an additional method (Example->, Google).
+- Dynamic navbar showing user details and logout option upon login.
 
-- Product Management:
+## Product Management:
 
-Add, update, and delete sports equipment with customizable fields like rating, price, and stock status.
-Logged-in users can view and manage their added equipment on a private "My Equipment List" page.
+- Add, update, and delete sports equipment with customizable fields like rating, price, and stock status.
+- Logged-in users can view and manage their added equipment on a private "My Equipment List" page.
 
-- Responsive Design:
+## Responsive Design:
 
-Fully responsive interface for seamless navigation across mobile, tablet, and desktop devices.
-Integrated dark/light theme toggle for personalized user experience.
+- Fully responsive interface for seamless navigation across mobile, tablet, and desktop devices.
+- Integrated dark/light theme toggle for personalized user experience.
 
-- Advanced Product Features:
+## Advanced Product Features:
 
-View detailed product information with beautiful design on a private route.
-Sort products by price (ascending or descending) for better usability.
+- View detailed product information with beautiful design on a private route.
+- Sort products by price (ascending or descending) for better usability.
 
-- Modern UI Elements:
+## Modern UI Elements:
 
-Interactive loading spinners, animated sliders, and additional meaningful sections on the homepage.
-Integration of Lottie React and React Awesome Reveal for animations and React Tooltip for enhanced interactivity.
+- Interactive loading spinners, animated sliders, and additional meaningful sections on the homepage.
+- Integration of Lottie React and React Awesome Reveal for animations and React Tooltip for enhanced interactivity.
 
-- Error Handling and Feedback:
+## Error Handling and Feedback:
 
-Custom error and success notifications using toast/sweet alerts instead of default alerts.
-A meaningful 404 page for non-existing routes.
+- Custom error and success notifications using toast/sweet alerts instead of default alerts.
+- A meaningful 404 page for non-existing routes.
 
-- Hosting and Deployment:
+## Hosting and Deployment:
 
-Client-side hosting via Netlify/Firebase and server-side hosting with Vercel.
-Error-free navigation across all routes, even on page reload.
+- Client-side hosting via Netlify/Firebase and server-side hosting with Vercel.
+- Error-free navigation across all routes, even on page reload.
 
 # Technology Used
 
