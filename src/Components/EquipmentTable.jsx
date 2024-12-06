@@ -3,6 +3,7 @@ import { data, Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import { FcViewDetails } from "react-icons/fc";
+import { Fade } from "react-awesome-reveal";
 
 const EquipmentTable = ({ equipment, index, equipments, setEquipments }) => {
   const {

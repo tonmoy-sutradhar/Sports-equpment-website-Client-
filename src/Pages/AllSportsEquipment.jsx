@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import EquipmentCard from "../Components/EquipmentCard";
 import EquipmentTable from "../Components/EquipmentTable";
+import { Fade } from "react-awesome-reveal";
 
 const AllSportsEquipment = () => {
   const loaderData = useLoaderData();
