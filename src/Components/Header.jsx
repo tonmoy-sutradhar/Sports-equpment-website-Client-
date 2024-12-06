@@ -14,7 +14,7 @@ const Header = () => {
   //     console.log("error in logout");
   //   });
   return (
-    <Fade>
+    <Fade triggerOnce="true">
       <div className="navbar bg-blue-500 opacity-80 text-white px-6 ">
         <div className="navbar-start">
           <div className="dropdown">

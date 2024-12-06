@@ -5,6 +5,7 @@ import { IoMdEyeOff } from "react-icons/io";
 import { IoEyeSharp } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import img from "../assets/banner.png";
 
 const Register = () => {
   const { createNewUser, setUser, updateUserProfile, GoogleLogin } =
@@ -77,22 +78,22 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center ">
       {/* Left Side: Image/Welcome Section */}
 
-      <div className="hidden md:flex w-full md:w-1/2 hero relative bg-[url('https://media.licdn.com/dms/image/v2/D5612AQHwiDS5WkydGA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1682490558908?e=2147483647&v=beta&t=2vB1mER2TmX5zWcFvytabIi4jK1nroqFlDFS_6HJreE')] bg-cover bg-center h-[500px]  items-center justify-center md:h-[690px] mr-7 text-white p-6 ">
-        <div className="text-center text-purple-600">
+      <div
+        className={`hidden md:flex w-full md:w-1/2 hero relative bg-cover bg-center h-[500px] items-center justify-center md:h-[690px] mr-7 text-white p-6`}
+        style={{
+          backgroundImage: `url(${img})`,
+        }}
+      >
+        <div className="text-center text-blue-600 -mt-40">
           <h1 className="text-4xl font-bold mb-4">Welcome!</h1>
-          <p className="text-lg">
-            Join us today and explore the endless possibilities.
-            <br />
-            Create your account now!
-          </p>
         </div>
       </div>
 
-      <div className="card bg-gradient-to-r from-blue-500 to-purple-600 w-full max-w-sm shrink-0 shadow-2xl rounded-none p-3">
-        <form onSubmit={handleSubmit} className="card-body ">
+      <div className="card bg-gradient-to-r from-blue-500 to-purple-600 w-full max-w-sm shrink-0 shadow-2xl rounded-xl p-3">
+        <form onSubmit={handleSubmit} className="card-body  ">
           <h1 className="text-xl font-semibold text-center">
             Register your account
           </h1>
@@ -152,14 +153,14 @@ const Register = () => {
               {showPassword ? <IoMdEyeOff /> : <IoEyeSharp />}
             </button>
           </div>
-          <div className="form-control">
-            <label className="cursor-pointer label justify-start">
+          <div className="form-control ">
+            <label className="cursor-pointer label justify-start ">
               <input
                 type="checkbox"
                 name="terms"
-                className="checkbox checkbox-success"
+                className="checkbox checkbox-success  bg-gray-300 border-2 border-green-500"
               />
-              <span className="label-text ml-2 text-gray-400">
+              <span className="label-text ml-2 text-black">
                 Accept Terms & Conditions
               </span>
             </label>
@@ -198,7 +199,7 @@ const Register = () => {
         <p className="text-black font-thin text-center">
           Already have an Account?{" "}
           <Link
-            className="text-blue-700 text-sm font-bold border-b-2 border-blue-700"
+            className="text-green-500  text-xl font-bold border-b-2 border-blue-700"
             to="/login"
           >
             Login

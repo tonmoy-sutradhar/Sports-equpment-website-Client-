@@ -72,7 +72,7 @@ const Login = () => {
               <label className="label">
                 <Link
                   to="/forgotPassword"
-                  className="label-text-alt link link-hover text-red-500"
+                  className="label-text-alt link link-hover text-black"
                 >
                   Forgot password?
                 </Link>
@@ -117,7 +117,7 @@ const Login = () => {
           </form>
           <p className="text-sm text-center text-black-500 mt-2">
             Don’t Have An Account ?{" "}
-            <Link to="/register" className="text-lime-400">
+            <Link to="/register" className="text-green-500 text-xl">
               Registers
             </Link>
           </p>

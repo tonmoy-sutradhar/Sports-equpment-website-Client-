@@ -1,4 +1,4 @@
-![Logo](https://sportsworld.com.bd/wp-content/uploads/2020/10/sport-equipment-concept_1284-13034.jpg)
+<img src="https://sportsworld.com.bd/wp-content/uploads/2020/10/sport-equipment-concept_1284-13034.jpg" alt="Logo" width="50" height="50" />
 
 # Sports Equipment Store Website || Assignment-10-Lotus
 

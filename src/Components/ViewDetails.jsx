@@ -20,6 +20,7 @@ const ViewDetails = () => {
     customization,
   } = viewData;
 
+  // addToCart AuthProvider theke niyeci..!
   const handleAddToCart = () => {
     addToCart(viewData);
     // alert(`${itemName} has been added to the cart!`);

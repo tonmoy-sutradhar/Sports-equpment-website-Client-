@@ -18,7 +18,7 @@ const Home = () => {
             Current Promotions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Fade direction="left">
+            <Fade direction="left" triggerOnce="true">
               <div className="bg-green-100 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-2">
                   50% Off on Football Gear
@@ -28,13 +28,13 @@ const Home = () => {
                 </p>
               </div>
             </Fade>
-            <Fade direction="up">
+            <Fade direction="up" triggerOnce="true">
               <div className="bg-blue-100 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-2">Buy 1 Get 1 Free</h3>
                 <p>Applicable to select tennis equipment.</p>
               </div>
             </Fade>
-            <Fade direction="right">
+            <Fade direction="right" triggerOnce="true">
               <div className="bg-yellow-100 p-6 rounded-lg shadow-md">
                 <h3 className="text-xl font-bold mb-2">Free Shipping</h3>
                 <p>On orders over $50, for all categories.</p>
@@ -45,13 +45,13 @@ const Home = () => {
 
         <Fade>
           <div className="mt-12 px-4 ">
-            <Fade direction="left">
+            <Fade direction="left" triggerOnce="true">
               <h2 className="text-3xl font-bold text-blue-500 text-center mb-6 ">
                 Featured Products
               </h2>
             </Fade>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Fade direction="left">
+              <Fade direction="left" triggerOnce="true">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img
                     src="https://cdn.shopify.com/s/files/1/0020/9407/1890/files/2_480x480.jpg"
@@ -64,7 +64,7 @@ const Home = () => {
                 </div>
               </Fade>
 
-              <Fade direction="up">
+              <Fade direction="up" triggerOnce="true">
                 {" "}
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img
@@ -78,7 +78,7 @@ const Home = () => {
                 </div>
               </Fade>
 
-              <Fade direction="right">
+              <Fade direction="right" triggerOnce="true">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img
                     src="https://s7ap1.scene7.com/is/image/aia/tennis-la-gi%20(2)?qlt=85&wid=1024&ts=1692756340641&dpr=off"
@@ -104,7 +104,12 @@ const Home = () => {
         <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 px-6 my-10  ">
           {/* .slice(0, 6) */}
           {loadData.slice(0, 6).map((equipment, index) => (
-            <Fade cascade="false" delay={index * 100} direction="right">
+            <Fade
+              cascade="false"
+              triggerOnce="true"
+              delay={index * 200}
+              direction="right"
+            >
               <EquipmentCard
                 key={equipment._id}
                 equipment={equipment}
