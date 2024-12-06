@@ -29,7 +29,7 @@ const AddEquipment = () => {
       customization,
     };
     // console.log(allData);
-    fetch("https://sports-equipment-store-server-zeta.vercel.app/equipment", {
+    fetch("http://localhost:8000/equipment", {
       method: "POST",
       headers: {
         "content-type": "application/json",

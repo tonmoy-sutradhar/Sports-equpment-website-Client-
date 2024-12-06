@@ -82,7 +82,7 @@ const Home = () => {
       </h1>
       <div className="w-full grid grid-cols-4 gap-7 px-6 my-10">
         {/* .slice(0, 6) */}
-        {loadData.slice(0, 6).map((equipment) => (
+        {loadData.map((equipment) => (
           <EquipmentCard
             key={equipment._id}
             equipment={equipment}

@@ -24,11 +24,11 @@ const Banner = () => {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
+        // autoplay={{
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // }}
+        modules={[EffectCoverflow, Pagination /*Autoplay*/]}
         className="mySwiper"
       >
         <SwiperSlide>

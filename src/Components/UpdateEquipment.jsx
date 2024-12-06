@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const UpdateEquipment = () => {
+  const { user } = useContext(AuthContext);
   const loaderUpdateData = useLoaderData();
   const {
     _id,
@@ -41,16 +43,13 @@ const UpdateEquipment = () => {
       customization,
     };
 
-    fetch(
-      `https://sports-equipment-store-server-zeta.vercel.app/equipment/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(equipmentData),
-      }
-    )
+    fetch(`http://localhost:8000/equipment/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(equipmentData),
+    })
       .then((res) => res.json())
       .then((value) => {
         // console.log(value, "update value");
@@ -235,7 +234,7 @@ const UpdateEquipment = () => {
                 <input
                   type="email"
                   name="userEmail"
-                  value="user@example.com"
+                  defaultValue={user?.email}
                   readOnly
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100"
                 />
@@ -249,7 +248,7 @@ const UpdateEquipment = () => {
                 <input
                   type="text"
                   name="userName"
-                  value="John Doe"
+                  defaultValue={user?.displayName}
                   readOnly
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-100"
                 />

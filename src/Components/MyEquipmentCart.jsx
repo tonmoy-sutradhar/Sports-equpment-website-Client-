@@ -28,12 +28,9 @@ const MyEquipmentCart = ({ item }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://sports-equipment-store-server-zeta.vercel.app/equipment/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`http://localhost:8000/equipment/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
