@@ -19,55 +19,61 @@ Sports equipment store is a responsive sports equipment e-commerce platform that
 <p align="center">
   <strong>Home Page</strong>  
   <br>
-  <img src="" alt="Home Page" width="80%" />
+  <img src="https://i.ibb.co.com/JkhbqmX/Screenshot-1047.png" alt="Home Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>Service Page</strong>  
+  <strong>Same Home Page</strong>  
   <br>
-  <img src="" alt="Service Page" width="80%" />
+  <img src="https://i.ibb.co.com/LRp7WJS/Screenshot-1048.png" alt="Home Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>Service Details Page</strong>  
+  <strong>All Sports Equipment Page</strong>  
   <br>
-  <img src="" alt="Service Details Page" width="80%" />
+  <img src="https://i.ibb.co.com/34LSyTG/Screenshot-1049.png" alt="All Sports Equipment Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>Career & Consult Page</strong>  
+  <strong>Add Sports Equipment Page</strong>  
   <br>
-  <img src="" alt="Career & Consult Page" width="80%" />
+  <img src="https://i.ibb.co.com/w76tDgS/Screenshot-1050.png" alt="Add Sports Equipment Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>My Profile</strong>  
+  <strong>View Details Equipment</strong>  
   <br>
-  <img src="" alt="My Profile" width="80%" />
+  <img src="https://i.ibb.co.com/hBTfDW8/Screenshot-1051.png" alt="View Details Equipment" width="80%" />
 </p>
 
 <p align="center">
-  <strong>About Page</strong>  
+  <strong>My Equipment List</strong>  
   <br>
-  <img src="" alt="About Page" width="80%" />
+  <img src="https://i.ibb.co.com/j5fBwCT/Screenshot-1052.png" alt="My Equipment List" width="80%" />
 </p>
 
 <p align="center">
-  <strong>Login Page</strong>  
+  <strong>Update Equipment Page</strong>  
   <br>
-  <img src="" alt="Login Page" width="80%" />
+  <img src="https://i.ibb.co.com/Wn7yYXq/Screenshot-1053.png" alt="Update Equipment Page" width="80%" />
 </p>
 
 <p align="center">
   <strong>Register Page</strong>  
   <br>
-  <img src="" alt="Register Page" width="80%" />
+  <img src="https://i.ibb.co.com/gZN2zmS/Screenshot-1054.png" alt="Register Page" width="80%" />
 </p>
 
 <p align="center">
-  <strong>Forgot Password</strong>  
+  <strong>Login page</strong>  
   <br>
-  <img src="" alt="Forgot Password" width="80%" />
+  <img src="https://i.ibb.co.com/YRz0QHH/Screenshot-1055.png" alt="Login page" width="80%" />
+</p>
+
+<p align="center">
+  <strong>Forgot Password page</strong>  
+  <br>
+  <img src="https://i.ibb.co.com/BL7TrfN/Screenshot-1056.png" alt="Forgot Password page" width="80%" />
 </p>
 
 # Features

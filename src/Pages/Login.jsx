@@ -110,7 +110,7 @@ const Login = () => {
                       navigate("/");
                     })
                     .catch((error) => {
-                      toast.warning("Google login don't succesful");
+                      toast.warning("Google login don't successful");
                     });
                 }}
                 className="text-sm py-1"

@@ -78,7 +78,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center  ">
       {/* Left Side: Image/Welcome Section */}
 
       <div
@@ -166,7 +166,22 @@ const Register = () => {
             </label>
           </div>
 
-          <div className="flex justify-center gap-1 mt-3 items-center w-[60%] border-2 border-blue-500 bg-lime-300 rounded-full px-1">
+          <div className="form-control mt-6">
+            <button
+              type="submit"
+              className="btn btn-active bg-lime-400 text-black font-bold rounded-lg"
+            >
+              Register
+            </button>
+          </div>
+
+          <div className="flex items-center justify-center my-4">
+            <div className="flex-grow border-t border-black"></div>
+            <span className="mx-4 text-black">OR</span>
+            <div className="flex-grow border-t border-black"></div>
+          </div>
+
+          <div className="flex justify-center gap-1 mt-1 items-center w-full border-2 border-blue-500 bg-lime-300 rounded-xl py-1">
             <img className="w-5 h-5 rounded-full" src={google} alt="img" />
             <button
               type="button"
@@ -183,15 +198,6 @@ const Register = () => {
               className="text-sm py-1"
             >
               Login with Google
-            </button>
-          </div>
-
-          <div className="form-control mt-6">
-            <button
-              type="submit"
-              className="btn btn-active bg-lime-400 text-black font-bold rounded-none"
-            >
-              Register
             </button>
           </div>
         </form>
