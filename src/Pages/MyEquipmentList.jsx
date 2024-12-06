@@ -28,7 +28,7 @@ const MyEquipmentList = () => {
               </Fade>
             ))
           ) : (
-            <p className="text-center text-xl font-bold  ml-[380px] text-purple-500 col-span-3">
+            <p className="text-center text-xl font-bold ml-[0px] md:ml-[100px]  lg:ml-[380px] text-purple-500 col-span-3">
               No Sports equipment added, Cart is Empty
             </p>
           )}

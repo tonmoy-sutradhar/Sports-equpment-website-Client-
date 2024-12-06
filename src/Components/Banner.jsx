@@ -39,9 +39,9 @@ const Banner = () => {
               alt="Slide 1"
             />
             {/* Text overlay */}
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
+            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-14 bg-black bg-opacity-50 text-white">
               <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
-                Gear Up for Victory!
+                ELEVATE YOUR GAME WITH PREMIUM SPORTS GEAR!
               </h1>
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Discover top-quality sports equipment and apparel for every
@@ -59,14 +59,14 @@ const Banner = () => {
               alt="Slide 2"
             />
             {/* Text overlay */}
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
+            <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
               <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
-                BEST SPORTS EQUIPMENT!
+                TOP-QUALITY EQUIPMENT FOR EVERY ATHLETE!
               </h1>
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Discover top-quality sports equipment and apparel for every
-                athlete. From the field to the court, we have what you need to
-                elevate your game.
+                Gear up for excellence with our premium sports equipment.
+                Designed to elevate your performance and help you achieve your
+                goals!
               </p>
             </div>
           </div>
@@ -79,14 +79,13 @@ const Banner = () => {
               alt="Slide 3"
             />
             {/* Text overlay */}
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
+            <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
               <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
-                BEST SELL TODAY!
+                SCORE BIG WITH LIMITED-TIME OFFERS!
               </h1>
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Discover top-quality sports equipment and apparel for every
-                athlete. From the field to the court, we have what you need to
-                elevate your game.
+                Unlock exclusive discounts on top-quality sports gear today.
+                Hurry, these deals won’t last long!
               </p>
             </div>
           </div>
@@ -99,7 +98,7 @@ const Banner = () => {
               alt="Slide 4"
             />
             {/* Text overlay */}
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
+            <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
               <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
                 Gear Up for Victory!
               </h1>

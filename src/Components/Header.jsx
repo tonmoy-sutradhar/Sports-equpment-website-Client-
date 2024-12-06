@@ -15,7 +15,7 @@ const Header = () => {
   //   });
   return (
     <Fade triggerOnce="true">
-      <div className="navbar bg-blue-500 opacity-80 text-white px-6 ">
+      <div className="navbar bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-80 text-white px-6 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +50,8 @@ const Header = () => {
             <div>
               <Link
                 to="/"
-                className="font-bold text-xl text-[#5c29b4] lg:text-2xl -mt-1"
+                // text-[#5c29b4]
+                className="font-bold text-xl text-black lg:text-2xl -mt-1"
               >
                 Sports Equipment Online Store 🏀
               </Link>
@@ -83,7 +84,7 @@ const Header = () => {
                 src={user?.photoURL}
                 alt="Profile-photo"
               />
-              <Tooltip id="my-tooltip" />
+              <Tooltip id="my-tooltip" place="top" />
               {/* <div>
                 <img
                   data-tooltip-id="my-tooltip"
