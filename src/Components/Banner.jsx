@@ -24,11 +24,11 @@ const Banner = () => {
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
-        modules={[EffectCoverflow, Pagination /*Autoplay*/]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -40,9 +40,10 @@ const Banner = () => {
             />
             {/* Text overlay */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-14 bg-black bg-opacity-50 text-white">
-              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
+              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#9fef15] to-blue-500 leading-tight drop-shadow-md">
                 ELEVATE YOUR GAME WITH PREMIUM SPORTS GEAR!
               </h1>
+
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Discover top-quality sports equipment and apparel for every
                 athlete. From the field to the court, we have what you need to
@@ -60,9 +61,10 @@ const Banner = () => {
             />
             {/* Text overlay */}
             <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
-              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
+              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#E26FC1] to-blue-500 leading-tight drop-shadow-md">
                 TOP-QUALITY EQUIPMENT FOR EVERY ATHLETE!
               </h1>
+
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Gear up for excellence with our premium sports equipment.
                 Designed to elevate your performance and help you achieve your
@@ -80,9 +82,10 @@ const Banner = () => {
             />
             {/* Text overlay */}
             <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
-              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
+              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 leading-tight drop-shadow-md">
                 SCORE BIG WITH LIMITED-TIME OFFERS!
               </h1>
+
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Unlock exclusive discounts on top-quality sports gear today.
                 Hurry, these deals won’t last long!
@@ -99,9 +102,10 @@ const Banner = () => {
             />
             {/* Text overlay */}
             <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
-              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-[#9fef15] leading-tight drop-shadow-md">
+              <h1 className="text-3xl mr-7 sm:text-3xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#e43535] to-yellow-500 leading-tight drop-shadow-md">
                 Gear Up for Victory!
               </h1>
+
               <p className="py-4 sm:py-6 text-sm sm:text-base lg:text-lg text-[white] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Discover top-quality sports equipment and apparel for every
                 athlete. From the field to the court, we have what you need to
