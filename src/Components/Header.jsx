@@ -3,16 +3,12 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { useContext } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Tooltip } from "react-tooltip";
+import { ThemeContext } from "../Provider/ThemeProvider";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
-  // logOut(auth)
-  //   .then(() => {
-  //     console.log("user logout");
-  //   })
-  //   .catch((err) => {
-  //     console.log("error in logout");
-  //   });
+  const { toggleTheme, theme } = useContext(ThemeContext);
+
   return (
     <Fade triggerOnce="true">
       <div className="navbar bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-80 text-white px-6 ">
@@ -42,8 +38,6 @@ const Header = () => {
               <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
               <NavLink to="/addEquipment">Add Equipment</NavLink>
               <NavLink to="/myEquipmentList">My Equipment List</NavLink>
-              {/* <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink> */}
             </ul>
           </div>
           <div className="flex items-center gap-2">
@@ -64,17 +58,19 @@ const Header = () => {
             <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
             <NavLink to="/addEquipment">Add Equipment</NavLink>
             <NavLink to="/myEquipmentList">My Equipment List</NavLink>
-            {/* <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register">Register</NavLink> */}
-            {/* <a
-              data-tooltip-id="my-tooltip"
-              data-tooltip-content="Hello to you too!"
-            >
-              data
-            </a> */}
           </ul>
         </div>
         <div className="navbar-end">
+          <button
+            title="Change theme"
+            onClick={toggleTheme}
+            className={` text-3xl mr-3 bg-[#e26fc1] font-bold transition duration-300 rounded-md shadow ${
+              theme === "light" ? "text-black " : "text-white bg-gray-500 "
+            }`}
+          >
+            {theme === "light" ? "🌙" : "🌞"}
+          </button>
+
           {user && user?.email ? (
             <div className="flex justify-center items-center gap-3">
               <img
@@ -85,17 +81,7 @@ const Header = () => {
                 alt="Profile-photo"
               />
               <Tooltip id="my-tooltip" place="top" />
-              {/* <div>
-                <img
-                  data-tooltip-id="my-tooltip"
-                  data-tooltip-content={user?.displayName}
-                  className="w-11 rounded-full"
-                  src={user?.photoURL}
-                  alt="Profile-photo"
-                />
-                <Tooltip id="my-Tooltip"></Tooltip>
-                
-              </div> */}
+
               <button onClick={logOut} className="btn bg-lime-400">
                 Logout
               </button>
@@ -110,8 +96,6 @@ const Header = () => {
               </NavLink>
             </div>
           )}
-
-          {/* <button className="btn bg-lime-400">Get Started</button> */}
         </div>
       </div>
     </Fade>
@@ -119,3 +103,16 @@ const Header = () => {
 };
 
 export default Header;
+{
+  /* <div>
+                <img
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content={user?.displayName}
+                  className="w-11 rounded-full"
+                  src={user?.photoURL}
+                  alt="Profile-photo"
+                />
+                <Tooltip id="my-Tooltip"></Tooltip>
+                
+              </div> */
+}
