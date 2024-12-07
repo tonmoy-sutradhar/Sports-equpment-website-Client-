@@ -40,7 +40,7 @@ const Banner = () => {
             />
             {/* Text overlay */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-14 bg-black bg-opacity-50 text-white">
-              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#9fef15] to-blue-500 leading-tight drop-shadow-md">
+              <h1 className="text-xl  mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#9fef15] to-blue-500 leading-tight drop-shadow-md">
                 ELEVATE YOUR GAME WITH PREMIUM SPORTS GEAR!
               </h1>
 
@@ -61,7 +61,7 @@ const Banner = () => {
             />
             {/* Text overlay */}
             <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
-              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#E26FC1] to-blue-500 leading-tight drop-shadow-md">
+              <h1 className="text-xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#E26FC1] to-blue-500 leading-tight drop-shadow-md">
                 TOP-QUALITY EQUIPMENT FOR EVERY ATHLETE!
               </h1>
 
@@ -82,7 +82,7 @@ const Banner = () => {
             />
             {/* Text overlay */}
             <div className="absolute top-0 px-14 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 text-white">
-              <h1 className="text-3xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 leading-tight drop-shadow-md">
+              <h1 className="text-xl mr-7 sm:text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 leading-tight drop-shadow-md">
                 SCORE BIG WITH LIMITED-TIME OFFERS!
               </h1>
 
