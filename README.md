@@ -43,7 +43,7 @@ Sports equipment store is a responsive sports equipment e-commerce platform that
 <p align="center">
   <strong>View Details Equipment</strong>  
   <br>
-  <img src="https://i.ibb.co.com/hBTfDW8/Screenshot-1051.png" alt="View Details Equipment" width="80%" />
+  <img src="https://i.ibb.co.com/26BZh4L/Screenshot-1059.png" alt="View Details Equipment" width="80%" />
 </p>
 
 <p align="center">
