@@ -1,11 +1,6 @@
-import { useLoaderData } from "react-router-dom";
-import { MdOutlineAddShoppingCart } from "react-icons/md";
-import { useContext } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
-import { toast } from "react-toastify";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
-  const { addToCart } = useContext(AuthContext);
   const viewData = useLoaderData();
   const {
     _id,
@@ -20,12 +15,6 @@ const ViewDetails = () => {
     customization,
   } = viewData;
 
-  // addToCart AuthProvider theke niyeci..!
-  const handleAddToCart = () => {
-    addToCart(viewData);
-    // alert(`${itemName} has been added to the cart!`);
-    toast.success(`${itemName} has been added to the cart.`);
-  };
   return (
     <div
       className="hero w-[80%] mx-auto h-[500px]  my-6 rounded-s-2xl"
@@ -90,11 +79,8 @@ const ViewDetails = () => {
             Delivery Time:{" "}
             <span className="text-blue-500">{processingTime} day</span>
           </p>
-          <button
-            onClick={handleAddToCart}
-            className="btn bg-lime-500 text-xl mt-3"
-          >
-            Add to Cart <MdOutlineAddShoppingCart></MdOutlineAddShoppingCart>
+          <button className="btn bg-lime-500 text-xl mt-3">
+            <Link to="/">Go Home </Link>
           </button>
         </div>
       </div>

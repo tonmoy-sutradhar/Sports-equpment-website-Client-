@@ -20,9 +20,6 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const provider = new GoogleAuthProvider();
 
-  // Cart state
-  const [cart, setCart] = useState([]);
-
   // const createNewUser = (email, password) => {
   //   setLoading(true);
   //   return createUserWithEmailAndPassword(auth, email, password);
@@ -80,14 +77,6 @@ const AuthProvider = ({ children }) => {
     return sendPasswordResetEmail(auth, email);
   };
 
-  // cart Methods
-  const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
-  };
-  const removeFromCart = (id) => {
-    setCart((prev) => prev.filter((item) => item._id !== id));
-  };
-
   const AuthInfo = {
     user,
     setUser,
@@ -98,9 +87,6 @@ const AuthProvider = ({ children }) => {
     updateUserProfile,
     GoogleLogin,
     forgotPassword,
-    cart,
-    addToCart,
-    removeFromCart,
   };
   return (
     <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>

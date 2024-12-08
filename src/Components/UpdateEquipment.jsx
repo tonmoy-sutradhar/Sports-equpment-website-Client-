@@ -43,16 +43,13 @@ const UpdateEquipment = () => {
       customization,
     };
 
-    fetch(
-      `https://sports-equipment-store-server-zeta.vercel.app/equipment/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(equipmentData),
-      }
-    )
+    fetch(`http://localhost:8000/equipment/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(equipmentData),
+    })
       .then((res) => res.json())
       .then((value) => {
         // console.log(value, "update value");
@@ -73,14 +70,7 @@ const UpdateEquipment = () => {
       </h1>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 ">
         <div className="max-w-4xl w-full bg-lime-200 shadow-lg rounded-lg p-6 sm:p-10 ">
-          {/* Page Title */}
-          {/* <h2 className="text-2xl sm:text-3xl font-bold text-gray-700 mb-6 text-center">
-            Update Equipment
-          </h2> */}
-
-          {/* Form */}
           <form onSubmit={handleUpdate} className="space-y-10">
-            {/* Row 1: Image & Item Name */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Image */}
               <div>
@@ -96,7 +86,6 @@ const UpdateEquipment = () => {
                 />
               </div>
 
-              {/* Item Name */}
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">
                   <span className="label-text font-bold mb-2">Item Name</span>
@@ -111,7 +100,6 @@ const UpdateEquipment = () => {
               </div>
             </div>
 
-            {/* Row 2: Category Name & Description */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Category Name */}
               <div>
@@ -129,7 +117,6 @@ const UpdateEquipment = () => {
                 />
               </div>
 
-              {/* Description */}
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">
                   <span className="label-text font-bold mb-2">Description</span>
@@ -144,7 +131,6 @@ const UpdateEquipment = () => {
               </div>
             </div>
 
-            {/* Row 3: Price, Rating, and Customization */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {/* Price */}
               <div>
@@ -160,7 +146,6 @@ const UpdateEquipment = () => {
                 />
               </div>
 
-              {/* Rating */}
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">
                   <span className="label-text font-bold mb-2">Rating</span>
@@ -175,7 +160,6 @@ const UpdateEquipment = () => {
                 />
               </div>
 
-              {/* Customization */}
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">
                   <span className="label-text font-bold mb-2">
@@ -192,9 +176,7 @@ const UpdateEquipment = () => {
               </div>
             </div>
 
-            {/* Row 4: Processing Time & Stock Status */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Processing Time */}
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">
                   <span className="label-text font-bold mb-2">
@@ -205,12 +187,11 @@ const UpdateEquipment = () => {
                   type="text"
                   name="processingTime"
                   defaultValue={processingTime}
-                  placeholder="E.g., 3-5 business days"
+                  placeholder="3-5 days"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-lime-400 focus:outline-none"
                 />
               </div>
 
-              {/* Stock Status */}
               <div>
                 <label className="block text-gray-600 text-sm font-medium mb-2">
                   <span className="label-text font-bold mb-2">

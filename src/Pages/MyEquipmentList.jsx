@@ -1,53 +1,60 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import MyEquipmentCart from "../Components/MyEquipmentCart";
 import { Fade } from "react-awesome-reveal";
 
 const MyEquipmentList = () => {
-  const { cart } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  const [myEquipment, setMyEquipment] = useState([]);
 
-  const [myCart, setMyCart] = useState(cart);
+  useEffect(() => {
+    if (user?.email) {
+      fetch(`http://localhost:8000/my-equipment?email=${user.email}`)
+        .then((res) => res.json())
+        .then((data) => setMyEquipment(data))
+        .catch((err) => console.error("Error fetching user equipment:", err));
+    }
+  }, [user?.email]);
+
+  const handleDelete1 = (id) => {
+    setMyEquipment((prev) => prev.filter((item) => item._id !== id));
+  };
 
   return (
-    <>
-      <h1 className="text-3xl font-bold text-center border-b-2 w-[300px] mx-auto text-lime-500 mb-5">
+    <div>
+      <h2 className="text-3xl font-bold text-center border-b-2 w-[400px] mx-auto text-lime-500 ">
         My Equipment List
-      </h1>
-      <div className="my-10">
+      </h2>
+      <p className="ml-4">
+        User Name: <span className="text-blue-500 ">{user.displayName}</span>
+      </p>
+      <p className="ml-4 mb-5">
+        USer Email: <span className="text-blue-500 ">{user.email}</span>
+      </p>
+      {myEquipment.length === 0 ? (
+        <p className="text-center font-bold text-blue-500 mt-7">
+          No equipment Added.
+        </p>
+      ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-9">
-          {cart.length > 0 ? (
-            cart.map((item, index) => (
-              <Fade cascade="false" delay={index * 100} direction="right">
-                {" "}
-                <MyEquipmentCart
-                  key={item._id}
-                  myCart={myCart}
-                  setMyCart={setMyCart}
-                  item={item}
-                ></MyEquipmentCart>
-              </Fade>
-            ))
-          ) : (
-            <p className="text-center text-xl font-bold ml-[0px] md:ml-[100px]  lg:ml-[380px] text-purple-500 col-span-3">
-              No Sports equipment added, Cart is Empty
-            </p>
-          )}
+          {myEquipment.map((item, index) => (
+            <Fade
+              cascade="false"
+              triggerOnce="true"
+              delay={index * 200}
+              direction="right"
+            >
+              <MyEquipmentCart
+                key={item._idk}
+                item={item}
+                handleDelete1={handleDelete1}
+              ></MyEquipmentCart>
+            </Fade>
+          ))}
         </div>
-      </div>
-    </>
+      )}
+    </div>
   );
 };
 
 export default MyEquipmentList;
-
-// import React from "react";
-
-// const MyEquipmentList = () => {
-//   return (
-//     <div>
-//       <h1>My Equipment List</h1>
-//     </div>
-//   );
-// };
-
-// export default MyEquipmentList;

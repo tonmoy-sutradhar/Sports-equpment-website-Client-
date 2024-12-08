@@ -7,6 +7,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   const loadData = useLoaderData();
+
   const [selectedCategory, setSelectedCategory] = useState("All"); // Track selected category
 
   // Filter data based on the selected category
@@ -149,7 +150,7 @@ const Home = () => {
         </h2> */}
 
         <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-7 px-6 my-10">
-          {filteredData.slice(0, 6).map((equipment, index) => (
+          {filteredData.slice(0, 10).map((equipment, index) => (
             <Fade
               key={equipment._id}
               cascade="false"
