@@ -19,12 +19,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:8000/equipment"),
+        loader: () =>
+          fetch(
+            "https://sports-equipment-store-server-zeta.vercel.app/equipment"
+          ),
       },
       {
         path: "/allSportsEquipment",
         element: <AllSportsEquipment></AllSportsEquipment>,
-        loader: () => fetch("http://localhost:8000/equipment"),
+        loader: () =>
+          fetch(
+            "https://sports-equipment-store-server-zeta.vercel.app/equipment"
+          ),
       },
       {
         path: "/addEquipment",
@@ -50,7 +56,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/equipment/${params.id}`),
+          fetch(
+            `https://sports-equipment-store-server-zeta.vercel.app/equipment/${params.id}`
+          ),
       },
       {
         path: "/updateEquipment/:id",
@@ -60,7 +68,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/equipment/${params.id}`),
+          fetch(
+            `https://sports-equipment-store-server-zeta.vercel.app/equipment/${params.id}`
+          ),
       },
       {
         path: "/login",

@@ -9,7 +9,9 @@ const MyEquipmentList = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:8000/my-equipment?email=${user.email}`)
+      fetch(
+        `https://sports-equipment-store-server-zeta.vercel.app/my-equipment?email=${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => setMyEquipment(data))
         .catch((err) => console.error("Error fetching user equipment:", err));

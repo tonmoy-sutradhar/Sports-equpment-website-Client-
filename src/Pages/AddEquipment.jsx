@@ -30,7 +30,7 @@ const AddEquipment = () => {
       userEmail: user?.email, // Include the user's email
     };
     // console.log(allData);
-    fetch("http://localhost:8000/equipment", {
+    fetch("https://sports-equipment-store-server-zeta.vercel.app/equipment", {
       method: "POST",
       headers: {
         "content-type": "application/json",
