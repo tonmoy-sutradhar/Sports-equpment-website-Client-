@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <Fade triggerOnce="true">
-      <div className="navbar bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-80 text-white px-6 ">
+      <div className="navbar bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  opacity-80 text-white px-6 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,8 +36,12 @@ const Header = () => {
             >
               <NavLink to="/">Home</NavLink>
               <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
-              <NavLink to="/addEquipment">Add Equipment</NavLink>
-              <NavLink to="/myEquipmentList">My Equipment List</NavLink>
+              {user && (
+                <>
+                  <NavLink to="/addEquipment">Add Equipment</NavLink>
+                  <NavLink to="/myEquipmentList">My Equipment List</NavLink>
+                </>
+              )}
             </ul>
           </div>
           <div className="flex items-center gap-2">
@@ -56,8 +60,12 @@ const Header = () => {
           <ul className="menu menu-horizontal px-1  font-bold gap-5">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/allSportsEquipment">All Sports Equipment</NavLink>
-            <NavLink to="/addEquipment">Add Equipment</NavLink>
-            <NavLink to="/myEquipmentList">My Equipment List</NavLink>
+            {user && (
+              <>
+                <NavLink to="/addEquipment">Add Equipment</NavLink>
+                <NavLink to="/myEquipmentList">My Equipment List</NavLink>
+              </>
+            )}
           </ul>
         </div>
         <div className="navbar-end">
